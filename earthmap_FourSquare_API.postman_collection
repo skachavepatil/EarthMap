@@ -1,0 +1,91 @@
+{
+	"variables": [],
+	"info": {
+		"name": "FourSquare_API",
+		"_postman_id": "a316edd2-2771-1f79-e449-e918ee96d46f",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Location By Name",
+			"request": {
+				"url": "http://localhost:8080/foursquare/search/pune",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "http://localhost:8080/foursquare/search/pune"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Categories",
+			"request": {
+				"url": "http://localhost:8080/foursquare/categories",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "http://localhost:8080/foursquare/categories"
+			},
+			"response": []
+		},
+		{
+			"name": "Create the Preferred List",
+			"request": {
+				"url": "http://localhost:8080/foursquare/createlist",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\n\t\"name\" : \"myTesting\",\n\t\"description\": \"my list description\"\n\t\n}"
+				},
+				"description": "http://localhost:8080/foursquare/createlist"
+			},
+			"response": []
+		},
+		{
+			"name": "Create the places under userdefined list",
+			"request": {
+				"url": "http://localhost:8080/foursquare/placesunderlist",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "id",
+						"value": "1",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "LIST_ID",
+						"value": "5d7f523f9016a0000b2eb8e4",
+						"description": "",
+						"disabled": true
+					},
+					{
+						"key": "venueId",
+						"value": "MyVenue",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":\"5d7f7e38af505800076cf48e\",\n\t\"venueId\": \"550d201c498e3f36752cf7a0\"\n}"
+				},
+				"description": "http://localhost:8080/foursquare/placesunderlist"
+			},
+			"response": []
+		}
+	]
+}
